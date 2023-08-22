@@ -26,7 +26,8 @@
 
 // const { rtop, left } = calc(22, 1);
 
-console.log('dsfsd');
+console.log('1');
+console.log('2');
 
 
 
