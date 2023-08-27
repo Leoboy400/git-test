@@ -1,35 +1,54 @@
-// function counter() {
-//     const button = document.querySelector('button');
-//     const countDiv = document.querySelector('.count div');
+const app = document.querySelector('.app');
+const aside = document.querySelector('.aside');
 
-//     function count() {
-//         let i = 0;
-//         return function () {
-//             ++i;
-//             countDiv.textContent = i;
-//         }
+function getForm(obg) {
+    let form = document.createElement('form');
+    let input = document.createElement('input');
+    let btn = document.createElement('button');
 
-//     }
-//     button.addEventListener('click', count());
+    let { plasholder = '1', text = '2' } = obg;
+
+    input.placeholder = plasholder;
+    input.classList.add('form__input')
+    btn.textContent = text;
+
+    form.append(input, btn);
+
+    return {
+        form: form,
+        btn: btn,
+        input: input
+    }
+}
+
+
+let { form, btn } = getForm({
+    text: 'nU I hUiny'
+});
+
+let one = getForm({
+    text: 'zal132432423'
+})
+
+one.input.addEventListener('input', () => {
+    console.log('rr')
+})
+
+app.append(form)
+
+
+
+// function genericForm() {
+//     let form = document.createElement('form');
+//     let input = document.createElement('input');
+//     let btn = document.createElement('button');
+
+
+
+
+//     form.append(input, btn);
+
+//     return form;
+
 // }
-// counter()
 
-// function calc() {
-//     let rtop = 0.3333;
-//     let left = 0;
-
-//     return {
-//         rtop: rtop,
-//         left: left
-//     }
-// }
-
-// const { rtop, left } = calc(22, 1);
-
-console.log('1');
-console.log('New repositorie');
-
-
-
-
-// 
